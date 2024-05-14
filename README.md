@@ -25,7 +25,7 @@ To collect memory stats for relevant processes, open another terminal in VS Code
 ./log-mem.sh
 ```
 
-This will write to `memory_usage.log`. Let it run for a while before plotting the data so that you will get a meaningful trend.
+This will use `ps` to get the RSS of processes containing 'ray' or 'python' in its process name. It will write the output to `memory_usage.log` every 5 seconds. Let it run for a while before plotting the data in order to get a meaningful trend.
 
 To plot the data in `memory_usage.log`, use the `src/plot_mem.py` script as follows:
 
@@ -40,3 +40,5 @@ This will create `output/plot.html`, which you can view in a web browser. Hoveri
 ![Graph](docs/graph.png)
 
 We ran this for about 112 hours and observed a continuous overall increase in the peak memory usage of the `ray/core/src/ray/gcs/gcs_server` process. Values of the peaks increased from an initial value of ~595 MB to ~662 MB over that period. That works out to roughly 598 KB per hour.
+
+The data and plot can be downloaded from [Releases](https://github.com/Prolucid/ray-memleak-repro/releases).
