@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "ray-memleak-repro"
+version = "0.1.0"
+description = "Ray Memory Leak Repro"
+authors = ["Scott Shingler"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ray = "^2.20.0"
+pandas = "^2.2.2"
+matplotlib = "^3.8.4"
+plotly = "^5.22.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.5.1"
+black = "^23.7.0"
+pre-commit = "^3.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
