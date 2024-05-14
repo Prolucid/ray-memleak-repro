@@ -39,4 +39,4 @@ This will create `output/plot.html`, which you can view in a web browser. Hoveri
 
 ![Graph](docs/graph.png)
 
-We ran this for about 166 hours and observed a continuous overall increase in the peak memory usage of the `ray/core/src/ray/gcs/gcs_server` process. Values of the peaks increased from an initial value of ~595 MB to ~662 MB over that period. That works out to roughly 403 KB per hour.
+We ran this for about 112 hours and observed a continuous overall increase in the peak memory usage of the `ray/core/src/ray/gcs/gcs_server` process. Values of the peaks increased from an initial value of ~595 MB to ~662 MB over that period. That works out to roughly 598 KB per hour.
